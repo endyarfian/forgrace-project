@@ -1,0 +1,50 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/home.html"
+      },
+      {
+        "source": "/mulai",
+        "destination": "/quiz1.html"
+      },
+      {
+        "source": "/pesanku",
+        "destination": "/pesan1.html"
+      },
+      {
+        "source": "/quiz2",
+        "destination": "/quiz2.html"
+      },
+      {
+        "source": "/dariaku",
+        "destination": "/pesan2.html"
+      },
+      {
+        "source": "/quisselanjutnya",
+        "destination": "/quiz3.html"
+      },
+      {
+        "source": "/sebuahpesan",
+        "destination": "/pesan3.html"
+      },
+      {
+        "source": "/quizterakhir",
+        "destination": "/quiz4.html"
+      },
+      {
+        "source": "/pesanterakhir",
+        "destination": "/pesan4.html"
+      }
+      
+
+    ]
+  }
+}

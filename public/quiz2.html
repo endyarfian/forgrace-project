@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>For Grace Project</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,500,600,700&display=swap" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link href="assets/css/pages/helpdesk.css" rel="stylesheet" type="text/css" />
+    <!--  END CUSTOM STYLE FILE  -->
+
+</head>
+
+
+<body class="sidebar-noneoverflow">
+
+    <div class="helpdesk container">
+
+        <div class="helpdesk layout-spacing">
+
+            <div class="hd-header-wrapper">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h4 class=""><b>QUIZ #2</b></h4>
+                        <p class="">Hang-man</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hd-tab-section">
+                <div class="row">
+                    <div class="col-md-12 mb-5 mt-5">
+
+                        <div class="accordion" id="hd-statistics">
+                            
+                            <div class="card">
+                                <div class="card-header" id="hd-statistics-3">
+                                    <div class="mb-0">
+                                        <div class=" collapsed" data-toggle="collapse" role="navigation" data-target="#collapse-hd-statistics-3" aria-expanded="false" aria-controls="collapse-hd-statistics-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity">
+                                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                            </svg>
+                                            Hint
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-hd-statistics-3" class="collapse" aria-labelledby="hd-statistics-3" data-parent="#hd-statistics">
+                                    <div class="card-body">
+                                        <p class="text-center"><b>Sebuah nama</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="hd-statistics-1">
+                                    <div class="mb-0">
+                                        <div class="" data-toggle="collapse" role="navigation" data-target="#collapse-hd-statistics-1" aria-expanded="false" aria-controls="collapse-hd-statistics-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                                           Puzzle #2
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="collapse-hd-statistics-1" class="collapse" aria-labelledby="hd-statistics-1" data-parent="#hd-statistics">
+                                    <div class="card-body">
+                                        <div class="container">
+                                            <p class="text-center">Tebak kata yang dimaksud</p>
+                                            <div class="text-center">Tebakan salah: <span id='mistakes'>0</span> dari <span id='maxWrong'></span></div>
+                                            <div class="text-center">
+                                              <p id="wordSpotlight"></p>
+                                              <div id="keyboard"></div><br>
+                                              <!-- <button class="btn btn-info btn-block" onClick="reset()">Reset</button> -->
+                                            </div> 
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                              <div class="card-header" id="hd-statistics-2">
+                                  <div class="mb-0">
+                                      <div class=" collapsed" data-toggle="collapse" role="navigation" data-target="#collapse-hd-statistics-2" aria-expanded="false" aria-controls="collapse-hd-statistics-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                           Open Message
+                                      </div>
+                                  </div>
+                              </div>
+                              <div id="collapse-hd-statistics-2" class="collapse" aria-labelledby="hd-statistics-2" data-parent="#hd-statistics">
+                                  <div class="card-body">
+                                      <p class="text-center">Masukkan password yang kamu dapat</p>
+                                          <div class="form-row mb-4">
+                                              <div class="col">
+                                                <input type="text" name="answer" id="answer" class="form-control" placeholder="Password">
+                                              </div>
+                                          </div>
+                                          <button onclick="fire()" class="btn btn-block btn-primary">submit</button>
+                                          <p class="text-center" id="password"></p>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="miniFooterWrapper" class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12">
+                    <div class="position-relative">
+                        <div class="arrow text-center">
+                            <p class=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 mx-auto col-lg-6 col-md-6 site-content-inner text-md-left text-center copyright align-self-center">
+                            <p class="mt-md-0 mt-4 mb-0">2023 &copy; <a target="_blank" href="#">Endy Arfian Design</a>.</p>
+                        </div>
+                        <div class="col-xl-5 mx-auto col-lg-6 col-md-6 site-content-inner text-md-right text-center align-self-center">
+                            <p class="mb-0">For Grace Project</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <script src="assets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+    <script src="assets/js/pages/helpdesk.js"></script>
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+    <script>
+      var qanswer = "alkid";
+      function fire() {
+var uanswer = document.getElementById('answer').value;
+    if (uanswer == qanswer) {
+      var open = window.open("/dariaku")
+              response.innerHTML = open;
+      
+      
+    } else {
+      alert("Salah, jangan ngawur lah!")
+    }
+  }
+  </script>
+    <script>
+        var fruits = [
+	"anastasya",
+  "grace",
+  "agustin"
+
+]
+
+let answer = '';
+let maxWrong = 3;
+let mistakes = 0;
+let guessed = [];
+let wordStatus = null;
+
+function randomWord() {
+  answer = fruits[Math.floor(Math.random() * fruits.length)];
+}
+
+function generateButtons() {
+  let buttonsHTML = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter =>
+    `
+      <button
+        class="btn btn-lg btn-primary m-2"
+        id='` + letter + `'
+        onClick="handleGuess('` + letter + `')"
+      >
+        ` + letter + `
+      </button>
+    `).join('');
+
+  document.getElementById('keyboard').innerHTML = buttonsHTML;
+}
+
+function handleGuess(chosenLetter) {
+  guessed.indexOf(chosenLetter) === -1 ? guessed.push(chosenLetter) : null;
+  document.getElementById(chosenLetter).setAttribute('disabled', true);
+
+  if (answer.indexOf(chosenLetter) >= 0) {
+    guessedWord();
+    checkIfGameWon();
+  } else if (answer.indexOf(chosenLetter) === -1) {
+    mistakes++;
+    updateMistakes();
+    checkIfGameLost();
+    updateHangmanPicture();
+  }
+}
+
+function updateHangmanPicture() {
+  document.getElementById('hangmanPic').src = './images/' + mistakes + '.jpg';
+}
+
+function checkIfGameWon() {
+  if (wordStatus === answer) {
+    document.getElementById('keyboard').innerHTML = 'Selamat, kamu berhasil!. Kamu bisa gunakan password "alkid" untuk mengakses halaman selanjutnya';
+  }
+}
+
+function checkIfGameLost() {
+  if (mistakes === maxWrong) {
+    // document.getElementById('wordSpotlight').innerHTML = 'The answer was: ' + answer;
+    document.getElementById('keyboard').innerHTML = 'Yah kamu kalah!!!, refresh halaman dan coba lagi.';
+  }
+}
+
+function guessedWord() {
+  wordStatus = answer.split('').map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join('');
+
+  document.getElementById('wordSpotlight').innerHTML = wordStatus;
+}
+
+function updateMistakes() {
+  document.getElementById('mistakes').innerHTML = mistakes;
+}
+
+function reset() {
+  mistakes = 0;
+  guessed = [];
+  document.getElementById('hangmanPic').src = './images/0.jpg';
+
+  randomWord();
+  guessedWord();
+  updateMistakes();
+  generateButtons();
+}
+
+document.getElementById('maxWrong').innerHTML = maxWrong;
+
+randomWord();
+generateButtons();
+guessedWord();
+    </script>
+</body>
+
+</html>
